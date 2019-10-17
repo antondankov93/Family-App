@@ -1,0 +1,13 @@
+.PriorityInfoComponent img{
+    border-radius: 20px;
+
+}
+
+.PriorityInfoComponent{
+
+    display: flex;
+    justify-content: center;
+   color: white;
+    height: 40px;
+    background-color: rgba(255, 21, 69, 0.45);
+}

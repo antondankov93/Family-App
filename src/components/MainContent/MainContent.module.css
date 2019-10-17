@@ -1,0 +1,18 @@
+.mainContent{
+  display: flex;
+  flex-wrap: wrap;
+  width: 1400px;
+  min-height: 450px;
+  margin: 5px auto;
+  background-color: rgb(242, 237, 234);
+}
+
+.avatarPicture img {
+  width: 100px;
+  border-radius: 12px;
+}
+
+.insideContent{
+  display:flex;
+  height: 550px;
+}

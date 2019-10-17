@@ -1,0 +1,19 @@
+.footerGrid{
+ width: 1400px;
+    margin: 0 auto;
+}
+
+.itemsMenu{
+    display: flex;
+    justify-content: space-around;
+    background-color: azure;
+}
+
+.itemsMenu img{
+    width: 70px;
+}
+
+.item img:hover{
+    transition: 0.3s;
+    transform: scale(1.2);
+}

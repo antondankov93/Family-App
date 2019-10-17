@@ -1,0 +1,30 @@
+.Wrapper {
+    height: 500px;
+    width: 250px;
+    padding: 15px;
+    background-color: rgba(184, 255, 129, 0.82);
+
+
+}
+
+.wrapperMembers {
+    margin: 0 auto;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+
+}
+
+.members a{
+    text-decoration: none;
+    color: black;
+}
+
+.members a:hover{
+    text-shadow: 2px 2px 4px #000000;
+}
+
+

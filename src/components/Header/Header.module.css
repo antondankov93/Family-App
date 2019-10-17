@@ -1,0 +1,15 @@
+.MainHeader{
+  display: flex;
+  justify-content: space-around;
+  background-color: lightgreen;
+  align-items: center;
+  height: 100px;
+}
+
+
+
+
+
+.MainHeader img {
+  height: 100px;
+}

@@ -1,0 +1,30 @@
+.onePost{
+    margin: 10px;
+    width: 600px;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.onePost p{
+    padding: 5px   ;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.onePost img{
+    width: 50px;
+    border-radius: 30px;
+}
+
+.likeButton{
+    background-color: chartreuse;
+    border-radius: 5px;
+}
+
+.likesCounter{
+    background-color: #5cb100;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
