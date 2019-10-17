@@ -6,7 +6,7 @@ import NavigationItems from "./Header-Navigation/NavigationItems";
 const Header = (props) => {
   return (
     <header className={styles.MainHeader}>
-        <img src={props.LogoPicture[0].Adress} />
+        <img src="https://img.icons8.com/color/48/000000/confetti.png"/>
         <NavigationItems/>
 
     </header>

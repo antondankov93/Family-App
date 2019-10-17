@@ -11,7 +11,7 @@ const App = (props) => {
 
     return (
             <div className="wrapper">
-                <Header LogoPicture={props.state.Icons.Logos}/>
+                <Header/>
                 <MainContent dispatch={props.dispatch} AvatarLogo={props.state.Avatars} PostWindow={props.state.HomePage} MessagesProps={props.state.MessagesPage.MessageData} Persons={props.state.MessagesPage.DialogPersons}/>
             </div>
     );
