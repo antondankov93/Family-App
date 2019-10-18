@@ -74,7 +74,7 @@ let store = {
         }
         else if (action.type === SEND_MESSAGE){
             let body = this._state.MessagesPage.newMessageBody;
-            this._state.MessagesPage.newMessageBody = '';
+            //this._state.MessagesPage.newMessageBody = '';
             this._state.MessagesPage.MessageData.push({id: 4, dataText: body});
 
         }

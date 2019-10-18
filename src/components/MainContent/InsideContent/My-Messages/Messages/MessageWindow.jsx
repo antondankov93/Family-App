@@ -11,6 +11,7 @@ const MessageWindow = (props) => {
     let newMessageBody = state.newMessageBody;
     let onSendMessageClick = () => {
        props.store.dispatch(sendMessageCreater())
+
     };
     let onNewMessageChange = (e) =>{
         let body = e.target.value;
