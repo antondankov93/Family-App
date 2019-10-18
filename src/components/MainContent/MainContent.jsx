@@ -13,12 +13,11 @@ const MainContent = (props) => {
             <main class={styles.mainContent}>
                 <div className={styles.insideContent}>
                     <SideBar/>
-                    <InsideContent dispatch={props.dispatch} AvatarLogo={props.AvatarLogo} PostWindow={props.PostWindow } MessagesProps={props.MessagesProps} Persons={props.Persons}/>
+                    <InsideContent dispatch={props.dispatch} store={props.store}/>
                 </div>
                 <FooterMenu/>
 
             </main>
-
 
 
     );

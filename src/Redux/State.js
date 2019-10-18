@@ -70,28 +70,22 @@ let store = {
         }
         else if (action.type === UPDATE_NEW_MESSAGE_BODY){
             this._state.MessagesPage.newMessageBody = action.body;
+            this._callSubscriber(this._state);
         }
         else if (action.type === SEND_MESSAGE){
             let body = this._state.MessagesPage.newMessageBody;
             this._state.MessagesPage.newMessageBody = '';
-            this._state.MessagesPage.MessageData.push({id: 3, dataText: body});
+            this._state.MessagesPage.MessageData.push({id: 4, dataText: body});
 
         }
     }
 }
 
-export const addPostActionCreater = () =>{
-    return {
-        type: 'ADD-POST',
-    }
-}
-export const onPostChangeActionCreater = (text) =>{
-    return {
-        type: 'UpdateNewPost',
-        newPostText: text,
+export const addPostActionCreater = () =>({type: ADD_POST})
+export const onPostChangeActionCreater = (text) =>({type: UPDATE_NEW_POST, newPostText: text})
 
-    }
-}
+export const sendMessageCreater = () =>({type: SEND_MESSAGE})
+export const updateNewMessageBodyCreater = (body) =>({type: UPDATE_NEW_MESSAGE_BODY, body: body})
 
 
 

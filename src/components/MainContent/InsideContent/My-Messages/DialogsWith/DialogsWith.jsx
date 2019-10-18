@@ -5,7 +5,8 @@ import DialogItem from "./DialogItem/DialogItem";
 
 const DialogsWith = (props) => {
 
-    let DialogElement = props.Persons.map(d => <DialogItem name={d.name} id={d.id}/>
+    let store = props.store.getState();
+    let DialogElement = store.MessagesPage.DialogPersons.map(d => <DialogItem name={d.name} id={d.id}/>
     );
 
     return (

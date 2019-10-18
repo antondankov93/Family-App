@@ -6,10 +6,11 @@ import MessageWindow from "./Messages/MessageWindow";
 const Messages = (props) => {
     return(
         <div className={styles.MessagesGrid}>
-            <DialogsWith AvatarLogo={props.AvatarLogo} Persons={props.Persons}/>
-            <MessageWindow MessagesProps={props.MessagesProps}/>
+            <DialogsWith store={props.store}/>
+            <MessageWindow dispatch={props.dispatch} store={props.store}/>
         </div>
     )
 }
 
 export default Messages;
+

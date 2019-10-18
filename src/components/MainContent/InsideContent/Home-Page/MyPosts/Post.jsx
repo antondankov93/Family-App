@@ -5,26 +5,26 @@ import {addPostActionCreater, onPostChangeActionCreater} from "../../../../../Re
 
 
 let Post = (props) => {
-
-    let Posts = props.PostWindow.PostsArray.map(p => <PostElement message={p.text}/>)
+    let state = props.store.getState().HomePage;
+    let Posts = state.PostsArray.map(p => <PostElement message={p.text}/>)
 
     let newPostElement = React.createRef();
 
     let addNewPost = () => {
         let text = newPostElement.current.value;
-        props.dispatch(addPostActionCreater());
+        props.store.dispatch(addPostActionCreater());
     }
 
     let onPostChange = () =>{
         let text = newPostElement.current.value;
-        let action =onPostChangeActionCreater(text);
-        props.dispatch(action);
+        let action = onPostChangeActionCreater(text);
+        props.store.dispatch(action);
     }
 
     return (
         <div>
             <div>{Posts}</div>
-            <textarea onChange={onPostChange} value={props.PostWindow.newPostText} ref={newPostElement} cols="30" rows="6"></textarea><br></br>
+            <textarea onChange={onPostChange} value={props.store.getState().HomePage.newPostText} ref={newPostElement} cols="30" rows="6"></textarea><br></br>
             <button onClick={addNewPost}>Отправить</button>
         </div>
     )

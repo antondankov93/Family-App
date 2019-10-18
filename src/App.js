@@ -12,7 +12,7 @@ const App = (props) => {
     return (
             <div className="wrapper">
                 <Header/>
-                <MainContent dispatch={props.dispatch} AvatarLogo={props.state.Avatars} PostWindow={props.state.HomePage} MessagesProps={props.state.MessagesPage.MessageData} Persons={props.state.MessagesPage.DialogPersons}/>
+                <MainContent dispatch={props.dispatch} store={props.store}/>
             </div>
     );
 }
