@@ -2,6 +2,8 @@ const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST = 'UpdateNewPost';
 
 const HomePageReducer = (state, action) => {
+
+
     if (action.type === ADD_POST) {
         let newPost = {
             text: state.newPostText,
