@@ -1,12 +1,6 @@
 import HomePageReducer from "./HomePageReducer";
 import MessagePageReducer from "./MessagePageReducer";
 
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST = 'UpdateNewPost';
-const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
-const SEND_MESSAGE = 'SEND-MESSAGE';
-
-
 
 let store = {
     _state: {
@@ -67,10 +61,6 @@ let store = {
 
     }
 }
-
-
-
-
 
 
 

@@ -3,7 +3,7 @@
     flex-direction: column;
     margin-left: 15px;
     background-color: rgba(127, 255, 212, 0.57);
-    height: 400px;
+    height: auto;
     width: 700px;
     padding: 15px;
 }

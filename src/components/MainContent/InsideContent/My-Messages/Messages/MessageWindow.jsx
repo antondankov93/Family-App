@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './MessageWindow.module.css';
 import MessageItem from "./MessageItem/MessageItem";
-import {sendMessageCreater, updateNewMessageBodyCreater} from "../../../../../Redux/State";
+import {sendMessageCreater, updateNewMessageBodyCreater} from "../../../../../Redux/MessagePageReducer";
+
 
 
 const MessageWindow = (props) => {
@@ -32,5 +33,6 @@ const MessageWindow = (props) => {
     )
 
 }
+
 
 export default MessageWindow;
