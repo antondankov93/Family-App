@@ -1,11 +1,6 @@
 import HomePageReducer from "./HomePageReducer";
 import MessagePageReducer from "./MessagePageReducer";
 
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST = 'UpdateNewPost';
-const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
-const SEND_MESSAGE = 'SEND-MESSAGE';
-
 
 
 let store = {
@@ -60,39 +55,17 @@ let store = {
     },
 
     dispatch(action){
-        // if(action.type === ADD_POST){
-        //     let newPost = {
-        //         text: this._state.HomePage.newPostText,
-        //     }
-        //     this._state.HomePage.PostsArray.push(newPost);
-        //     this._state.HomePage.newPostText = '';
-        //     this._callSubscriber(this._state);
-        // }
-        // else if(action.type === UPDATE_NEW_POST){
-        //     this._state.HomePage.newPostText = action.newText;
-        //     this._callSubscriber(this._state);
-        // }
+
         this._state.HomePage = HomePageReducer(this._state.HomePage, action);
         this._state.MessagesPage = MessagePageReducer(this._state.MessagesPage, action);
         this._callSubscriber(this._state);
-        // else if (action.type === UPDATE_NEW_MESSAGE_BODY){
-        //     this._state.MessagesPage.newMessageBody = action.body;
-        //     this._callSubscriber(this._state);
-        // }
-        // else if (action.type === SEND_MESSAGE){
-        //     let body = this._state.MessagesPage.newMessageBody;
-        //     //this._state.MessagesPage.newMessageBody = '';
-        //     this._state.MessagesPage.MessageData.push({id: 4, dataText: body});
-        //
-        // }
+
     }
 }
 
-export const addPostActionCreater = () =>({type: ADD_POST})
-export const onPostChangeActionCreater = (text) =>({type: UPDATE_NEW_POST, newPostText: text})
 
-export const sendMessageCreater = () =>({type: SEND_MESSAGE})
-export const updateNewMessageBodyCreater = (body) =>({type: UPDATE_NEW_MESSAGE_BODY, body: body})
+
+
 
 
 

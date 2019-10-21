@@ -1,3 +1,7 @@
+.wrapper{
+    overflow: auto;
+}
+
 .onePost{
     margin: 10px;
     width: 600px;

@@ -1,7 +1,7 @@
 import React from 'react';
 import style from "./Post.module.css";
 import PostElement from "./PostElement/PostElement";
-import {addPostActionCreater, onPostChangeActionCreater} from "../../../../../Redux/State";
+import {addPostActionCreater, onPostChangeActionCreater} from "../../../../../Redux/HomePageReducer";
 
 
 let Post = (props) => {
@@ -22,7 +22,7 @@ let Post = (props) => {
     }
 
     return (
-        <div>
+        <div className={style.wrapper}>
             <div>{Posts}</div>
             <textarea onChange={onPostChange} value={props.store.getState().HomePage.newPostText} ref={newPostElement} cols="30" rows="6"></textarea><br></br>
             <button onClick={addNewPost}>Отправить</button>
