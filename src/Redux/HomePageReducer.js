@@ -1,9 +1,18 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST = 'UpdateNewPost';
 
-const HomePageReducer = (state, action) => {
+let initialState = {
+    PostsArray: [
+        {text: "Я дома!"},
+    ],
+    newPostText: "Hey Hey Yo",
+
+}
+
+const HomePageReducer = (state = initialState, action) => {
 
     switch (action.type) {
+
         case ADD_POST:
             let newPost = {
                 text: state.newPostText,
@@ -11,9 +20,12 @@ const HomePageReducer = (state, action) => {
             state.PostsArray.push(newPost);
             state.newPostText = '';
 
+            return state;
 
         case UPDATE_NEW_POST:
             state.newPostText = action.newText;
+
+            return state;
 
         default:
             return state;

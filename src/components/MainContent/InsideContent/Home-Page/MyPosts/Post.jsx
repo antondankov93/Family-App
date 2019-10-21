@@ -5,6 +5,7 @@ import {addPostActionCreater, onPostChangeActionCreater} from "../../../../../Re
 
 
 let Post = (props) => {
+
     let state = props.store.getState().HomePage;
     let Posts = state.PostsArray.map(p => <PostElement message={p.text}/>)
 

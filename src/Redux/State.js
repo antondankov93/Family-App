@@ -2,7 +2,6 @@ import HomePageReducer from "./HomePageReducer";
 import MessagePageReducer from "./MessagePageReducer";
 
 
-
 let store = {
     _state: {
         HomePage: {
@@ -21,6 +20,7 @@ let store = {
                 {id: 4, name: "Оля"},
                 {id: 5, name: "Джанибег"},
                 {id: 6, name: "Пердыгуль"},],
+
             MessageData: [
                 {id: 1, dataText: "Привки!"},
                 {id: 2, dataText: "Как дела!"},
@@ -58,15 +58,11 @@ let store = {
 
         this._state.HomePage = HomePageReducer(this._state.HomePage, action);
         this._state.MessagesPage = MessagePageReducer(this._state.MessagesPage, action);
+
         this._callSubscriber(this._state);
 
     }
 }
-
-
-
-
-
 
 
 export default store;
