@@ -7,6 +7,7 @@ import Events from "./Events/events-template";
 import Calendar from "./Events/Family-Calendar/calendar-template";
 import TodoList from "./TODO-lists/todo-list-template";
 import  {Route} from "react-router-dom";
+import PostContainer from "./Home-Page/MyPosts/PostContainer";
 
 
 const InsideContent = (props) => {
@@ -17,7 +18,7 @@ const InsideContent = (props) => {
                 <Route path='/MainContent/InsideContent/Contacts' render={ () => <Contacts />} />
                 <Route path='/MainContent/InsideContent/TODO-lists' render={ () => <TodoList />} />
                 <Route path='/MainContent/InsideContent/My-Messages' render={ () => <Messages dispatch={props.dispatch} store={props.store}/>} />
-                <Route path='/MainContent/InsideContent/My-Profile' render={ () => <Post dispatch={props.dispatch} store={props.store}/>} />
+                <Route path='/MainContent/InsideContent/My-Profile' render={ () => <PostContainer store={props.store}/>} />
             </div>
 
     );

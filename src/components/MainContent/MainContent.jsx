@@ -13,7 +13,7 @@ const MainContent = (props) => {
             <main class={styles.mainContent}>
                 <div className={styles.insideContent}>
                     <SideBar/>
-                    <InsideContent dispatch={props.dispatch} store={props.store}/>
+                    <InsideContent store={props.store}/>
                 </div>
                 <FooterMenu/>
 
