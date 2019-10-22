@@ -6,7 +6,7 @@ let initialState = {
     PostsArray: [
         {text: "Я дома!"},
     ],
-    newPostText: "Hey Hey Yo",
+    newPostText: "Hey Hey",
 
 }
 
@@ -24,7 +24,7 @@ const HomePageReducer = (state = initialState, action) => {
             return state;
 
         case UPDATE_NEW_POST:
-            state.newPostText = action.newText;
+            state.newPostText = action.newPostText;
 
             return state;
 

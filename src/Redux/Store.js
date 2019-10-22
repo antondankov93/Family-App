@@ -8,7 +8,7 @@ let store = {
             PostsArray: [
                 {text: "Я дома!"},
             ],
-            newPostText: "Hey Hey Yo",
+            newPostText: "",
 
         },
 
