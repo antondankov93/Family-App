@@ -1,24 +1,41 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST = 'UpdateNewPost';
 
-const HomePageReducer = (state, action) => {
-    switch(action.type){
-        case ADD_POST:
-            let newPost = {text: state.newPostText}
 
+let initialState = {
+    PostsArray: [
+        {text: "Я дома!"},
+    ],
+    newPostText: "Hey Hey Yo",
+
+}
+
+const HomePageReducer = (state = initialState, action) => {
+
+    switch (action.type) {
+
+        case ADD_POST:
+            let newPost = {
+                text: state.newPostText,
+            }
             state.PostsArray.push(newPost);
             state.newPostText = '';
+
             return state;
 
         case UPDATE_NEW_POST:
             state.newPostText = action.newText;
+
             return state;
 
-            default: return state;
-        }
+        default:
+            return state;
     }
+
+}
 
 export const addPostActionCreater = () =>({type: ADD_POST})
 export const onPostChangeActionCreater = (text) =>({type: UPDATE_NEW_POST, newPostText: text})
+
 
 export default HomePageReducer;

@@ -2,7 +2,10 @@ import React from 'react';
 import styles from './MessageWindow.module.css';
 import MessageItem from "./MessageItem/MessageItem";
 import {sendMessageCreater, updateNewMessageBodyCreater} from "../../../../../Redux/MessagePageReducer";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5c365aab8dc55ce5702dca6fc8be0bf198526df3
 
 
 const MessageWindow = (props) => {

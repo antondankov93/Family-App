@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+<<<<<<< HEAD
 import store from "./Redux/Store";
+=======
+import store from "./Redux/redux-store";
+>>>>>>> 5c365aab8dc55ce5702dca6fc8be0bf198526df3
 import {BrowserRouter} from "react-router-dom";
 
 
