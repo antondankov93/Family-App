@@ -7,7 +7,7 @@ import {addPostActionCreater, onPostChangeActionCreater} from "../../../../../Re
 
 let Post = (props) => {
 
-    let Posts = props.posts.PostsArray.map(p => <PostElement message={p.text}/>)
+    let Posts = props.HomePage.PostsArray.map(p => <PostElement message={p.text}/>)
 
     let newPostElement = React.createRef();
 

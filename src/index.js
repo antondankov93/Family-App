@@ -11,7 +11,9 @@ import {Provider} from "react-redux";
 let rerenderEntireTree = (state) =>{
     ReactDOM.render(
         <BrowserRouter>
-            <Provider store={store}><App store={store}/></Provider>
+            <Provider store={store}>
+                <App />
+            </Provider>
     </BrowserRouter>, document.getElementById('root'));
 
 }

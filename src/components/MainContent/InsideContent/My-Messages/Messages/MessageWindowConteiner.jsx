@@ -1,45 +1,22 @@
 import React from 'react';
 import {sendMessageCreater, updateNewMessageBodyCreater} from "../../../../../Redux/MessagePageReducer";
 import MessageWindow from "./MessageWindow";
+import {connect} from "react-redux";
 
-const MessageWindowContainer = () => {
-    return <StoreContext.Consumer>{
-        store => {
-
-
-            let state = store.getState().MessagesPage;
-
-
-            let onSendMessageClick = () => {
-                store.dispatch(sendMessageCreater())
-
-            };
-            let onNewMessageChange = (body) => {
-                store.dispatch(updateNewMessageBodyCreater(body))
-            };
-
-            return (
-                <div>
-                    <MessageWindow state={state} updateNewMessageBody={onNewMessageChange}
-                                   sendMessage={onSendMessageClick}/>
-                </div>
-            )
-        }
-    }
-    </StoreContext.Consumer>
-}
-
-let f1 =()=>{
+let mapStateToProps =(state)=>{
     return{
-
+        MessagesPage: state.MessagesPage
     }
 }
-let f2 =()=>{
+let mapDispatchToProps =(dispatch)=>{
     return{
+        onSendMessageClick: () => {dispatch(sendMessageCreater())},
+
+        onNewMessageChange: (body) => {dispatch(updateNewMessageBodyCreater(body))}
 
     }
 }
 
-const SuperMessageWindowContainer = connect(f1, f2)(MessageWindow);
+const MessageWindowContainer = connect(mapStateToProps, mapDispatchToProps)(MessageWindow);
 
 export default MessageWindowContainer;
