@@ -6,14 +6,12 @@ let initialState = {
         {id: 1, name: "Петя"},
         {id: 2, name: 'Катя'},
         {id: 3, name: "Вася"},
-        {id: 4, name: "Оля"},
-        {id: 5, name: "Джанибег"},
-        {id: 6, name: "Пердыгуль"},],
+        {id: 4, name: "Оля"},],
+
     MessageData: [
         {id: 1, dataText: "Привки!"},
         {id: 2, dataText: "Как дела!"},
-        {id: 3, dataText: "Превед медвед!"},
-    ]
+        {id: 3, dataText: "Превед медвед!"},],
 }
 
 

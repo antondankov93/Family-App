@@ -18,8 +18,7 @@ let store = {
                 {id: 2, name: 'Катя'},
                 {id: 3, name: "Вася"},
                 {id: 4, name: "Оля"},
-                {id: 5, name: "Джанибег"},
-                {id: 6, name: "Пердыгуль"},],
+                {id: 5, name: "Джанибег"},],
 
             MessageData: [
                 {id: 1, dataText: "Привки!"},

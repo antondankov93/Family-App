@@ -5,16 +5,17 @@ import {sendMessageCreater, updateNewMessageBodyCreater} from "../../../../../Re
 
 const MessageWindow = (props) => {
 
-    let state = props.store.getState().MessagesPage;
-    let MessageElement = state.MessageData.map(m => <MessageItem text={m.dataText}/>)
-    let newMessageBody = state.newMessageBody;
+    let MessageElement = props.state.MessageData.map(m => <MessageItem text={m.dataText}/>)
+    let newMessageBody = props.state.newMessageBody;
+
+
     let onSendMessageClick = () => {
-       props.store.dispatch(sendMessageCreater())
+       props.sendMessage();
 
     };
     let onNewMessageChange = (e) =>{
         let body = e.target.value;
-        props.store.dispatch(updateNewMessageBodyCreater(body))
+        props.updateNewMessageBody(body);
     };
 
     return (

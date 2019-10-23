@@ -17,7 +17,7 @@ const InsideContent = (props) => {
                 <Route path='/MainContent/InsideContent/Events' render={ () => <Events />} />
                 <Route path='/MainContent/InsideContent/Contacts' render={ () => <Contacts />} />
                 <Route path='/MainContent/InsideContent/TODO-lists' render={ () => <TodoList />} />
-                <Route path='/MainContent/InsideContent/My-Messages' render={ () => <Messages dispatch={props.dispatch} store={props.store}/>} />
+                <Route path='/MainContent/InsideContent/My-Messages' render={ () => <Messages store={props.store}/>} />
                 <Route path='/MainContent/InsideContent/My-Profile' render={ () => <PostContainer store={props.store}/>} />
             </div>
 
