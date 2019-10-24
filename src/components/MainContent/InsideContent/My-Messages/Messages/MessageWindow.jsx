@@ -10,12 +10,12 @@ const MessageWindow = (props) => {
 
 
     let onSendMessageClick = () => {
-       props.sendMessage();
+       props.onSendMessageClick();
 
     };
     let onNewMessageChange = (e) =>{
         let body = e.target.value;
-        props.updateNewMessageBody(body);
+        props.onNewMessageChange(body);
     };
 
     return (

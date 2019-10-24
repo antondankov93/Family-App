@@ -15,19 +15,22 @@ const HomePageReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case ADD_POST:
-            let newPost = {
+           { let newPost = {
                 text: state.newPostText,
             }
-            state.PostsArray.push(newPost);
-            state.newPostText = '';
+            let stateCopy = {...state}
+            stateCopy.PostsArray = [...state.PostsArray];
+            stateCopy.PostsArray.push(newPost)
+            stateCopy.newPostText = '';
 
-            return state;
+            return stateCopy;}
 
-        case UPDATE_NEW_POST:
-            state.newPostText = action.newPostText;
+        case UPDATE_NEW_POST: {
+            let stateCopy = {...state}
+            stateCopy.newPostText = action.newPostText;
 
-            return state;
-
+            return stateCopy;
+}
         default:
             return state;
     }

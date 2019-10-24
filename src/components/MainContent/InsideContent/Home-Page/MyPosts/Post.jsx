@@ -12,7 +12,7 @@ let Post = (props) => {
     let newPostElement = React.createRef();
 
     let addNewPost = () => {
-        props.addPost();
+        props.addNewPost();
        //  let text = newPostElement.current.value;
        //  //props.addPost();
        // props.store.dispatch(addPostActionCreater());
@@ -20,7 +20,7 @@ let Post = (props) => {
 
     let onPostChange = () =>{
         let text = newPostElement.current.value;
-        props.updateNewPost(text);
+        props.onPostChange(text);
         // let action = onPostChangeActionCreater(text);
         // props.store.dispatch(action);
     }

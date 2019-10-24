@@ -9,4 +9,7 @@ let reducersBanch = combineReducers({
 
 let store = createStore(reducersBanch);
 
+window.store = store;
+
 export default store;
+

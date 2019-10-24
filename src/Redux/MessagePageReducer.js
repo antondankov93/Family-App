@@ -18,17 +18,22 @@ let initialState = {
 const MessagePageReducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case UPDATE_NEW_MESSAGE_BODY:
-            state.newMessageBody = action.body;
+        case UPDATE_NEW_MESSAGE_BODY: {
+            let stateCopy = {...state}
+            stateCopy.newMessageBody = action.body;
 
-            return state;
+            return stateCopy;
+            }
 
-        case SEND_MESSAGE:
+        case SEND_MESSAGE: {
             let body = state.newMessageBody;
-            state.newMessageBody = '';
-            state.MessageData.push({dataText: body});
+            let stateCopy = {...state}
+            stateCopy.newMessageBody = '';
+            stateCopy.MessageData = [...state.MessageData];
+            stateCopy.MessageData.push({dataText: body});
 
-            return state;
+            return stateCopy;
+           }
 
         default:
             return state;
