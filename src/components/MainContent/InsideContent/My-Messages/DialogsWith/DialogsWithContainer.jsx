@@ -1,19 +1,21 @@
 import React from 'react';
 import DialogsWith from "./DialogsWith";
+import {connect} from "react-redux";
 
 
 
-const DialogsWithConatiner = (props) => {
-debugger
-    let store = props.store.getState().MessagesPage;
-
-    return (
-        <div>
-           <DialogsWith store={store}/>
-        </div>
-    )
-
+let mapStateToProps = (state) => {
+    return{
+        MessagesPage: state.MessagesPage,
+    }
 }
 
+let mapDispatchToProps = () => {
+    return{
 
-export default DialogsWithConatiner;
+    }
+}
+
+const DialogsWithContainer = connect(mapStateToProps, mapDispatchToProps)(DialogsWith)
+
+export default DialogsWithContainer;

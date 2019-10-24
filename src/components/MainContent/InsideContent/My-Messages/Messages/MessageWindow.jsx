@@ -5,8 +5,8 @@ import {sendMessageCreater, updateNewMessageBodyCreater} from "../../../../../Re
 
 const MessageWindow = (props) => {
 
-    let MessageElement = props.state.MessageData.map(m => <MessageItem text={m.dataText}/>)
-    let newMessageBody = props.state.newMessageBody;
+    let MessageElement = props.MessagesPage.MessageData.map(m => <MessageItem text={m.dataText}/>)
+    let newMessageBody = props.MessagesPage.newMessageBody;
 
 
     let onSendMessageClick = () => {
