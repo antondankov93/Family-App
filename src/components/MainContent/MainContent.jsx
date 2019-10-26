@@ -6,14 +6,14 @@ import FooterMenu from "../FooterMenu/FooterMenu";
 import store from "../../Redux/Store";
 
 
-const MainContent = (props) => {
+const MainContent = () => {
 
     return (
 
             <main class={styles.mainContent}>
                 <div className={styles.insideContent}>
                     <SideBar/>
-                    <InsideContent store={props.store}/>
+                    <InsideContent/>
                 </div>
                 <FooterMenu/>
 
