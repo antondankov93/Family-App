@@ -18,7 +18,11 @@ const HomePageReducer = (state = initialState, action) => {
            { let newPost = {
                 text: state.newPostText,
             }
-            let stateCopy = {...state}
+            let stateCopy = {...state,
+
+
+
+            }
             stateCopy.PostsArray = [...state.PostsArray];
             stateCopy.PostsArray.push(newPost)
             stateCopy.newPostText = '';

@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from "./Messages-template.module.css"
-import DialogsWith from "./DialogsWith/DialogsWith";
-import MessageWindow from "./Messages/MessageWindow";
 import DialogsWithContainer from "./DialogsWith/DialogsWithContainer";
 import MessageWindowContainer from "./Messages/MessageWindowConteiner";
 
