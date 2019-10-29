@@ -1,0 +1,31 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoAndStatus{
+    display: flex;
+    flex-direction: column;
+    width: 200px
+}
+
+.UserAllContent{
+display: flex;
+    justify-content: space-between;
+}
+
+.NameStatus{
+    display: flex;
+    flex-direction: column;
+}
+
+.NameStatus .Name{
+    font-weight: bold;
+}
+
+
+.CountryCity{
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './DialogsWith.module.css'
 import DialogItem from "./DialogItem/DialogItem";
+import {NavLink} from "react-router-dom";
 
 
 const DialogsWith = (props) => {
@@ -10,6 +11,7 @@ const DialogsWith = (props) => {
     return (
         <div className={styles.Wrapper}>
             <div className={styles.wrapperMembers}>
+                <NavLink to="/MainContent/InsideContent/UsersList"  className={styles.navlink}>Показать пользователей</NavLink>
                 {DialogElement}
             </div>
 

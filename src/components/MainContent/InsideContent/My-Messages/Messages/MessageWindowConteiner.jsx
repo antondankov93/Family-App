@@ -3,16 +3,20 @@ import {sendMessageCreater, updateNewMessageBodyCreater} from "../../../../../Re
 import MessageWindow from "./MessageWindow";
 import {connect} from "react-redux";
 
-let mapStateToProps =(state)=>{
-    return{
+let mapStateToProps = (state) => {
+    return {
         MessagesPage: state.MessagesPage,
     }
 }
-let mapDispatchToProps =(dispatch)=>{
-    return{
-        onSendMessageClick: () => {dispatch(sendMessageCreater())},
+let mapDispatchToProps = (dispatch) => {
+    return {
+        onSendMessageClick: () => {
+            dispatch(sendMessageCreater())
+        },
 
-        onNewMessageChange: (body) => {dispatch(updateNewMessageBodyCreater(body))},
+        onNewMessageChange: (body) => {
+            dispatch(updateNewMessageBodyCreater(body))
+        },
 
     }
 }
