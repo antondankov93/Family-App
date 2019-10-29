@@ -17,6 +17,7 @@
 }
 .logoAndStatus .followedBtn{
     border-radius: 15px;
+    outline: none;
 }
 
 .UserAllContent{
