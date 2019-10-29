@@ -1,14 +1,15 @@
 import React from 'react';
-import UsersList from './UsersList'
 import {connect} from "react-redux";
 import {followAC, setUsersAC, unfollowAC} from "../../../../Redux/UsersPageReducer";
 import UsersListCLS from "./UsersList(class_component)";
 
 
-
 let mapStateToProps = (state) => {
     return {
-        users: state.UsersPage.users
+        users: state.UsersPage.users,
+        pageSize: state.UsersPage.pageSize,
+        totalUsersCount: state.UsersPage.totalUsersCount,
+        currentPage: state.UsersPage.currentPage,
     }
  }
 

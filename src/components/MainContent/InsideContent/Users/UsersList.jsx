@@ -40,6 +40,15 @@ const UsersList = (props) => {
       }
   }
 
+    <div className={s.paginator}>
+        <span>1</span>
+        <span className={s.selected}>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+    </div>
+
+
     return (
         <div>
             <button onClick={getUsers}>Get users</button>
@@ -82,4 +91,3 @@ const UsersList = (props) => {
 }
 
 
-export default UsersList;
