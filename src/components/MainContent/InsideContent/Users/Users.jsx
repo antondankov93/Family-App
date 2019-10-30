@@ -1,5 +1,5 @@
 import React from 'react'
-import s from "./UsersList.module.css";
+import s from "./Users.module.css";
 import usersPhoto from "../../../../assets/Image/UsersIcon.png";
 
 
