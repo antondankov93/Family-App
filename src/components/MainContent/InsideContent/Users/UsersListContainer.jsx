@@ -1,7 +1,13 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {followAC, setUsersAC, unfollowAC} from "../../../../Redux/UsersPageReducer";
-import UsersListCLS from "./UsersList(class_component)";
+import {
+    followAC,
+    setCurrentPageAC,
+    setTotalUsersCountAC,
+    setUsersAC,
+    unfollowAC
+} from "../../../../Redux/UsersPageReducer";
+import UsersAPIComponent from "./UsersAPIComponent";
 
 
 let mapStateToProps = (state) => {
@@ -24,11 +30,21 @@ let mapDispatchToProps = (dispatch) => {
         },
         setUsers: (users) => {
             dispatch(setUsersAC(users))
-        }
+        },
+
+        setCurrentPage: (pageNumber) => {
+            dispatch(setCurrentPageAC(pageNumber))
+        },
+
+     setTotalUsersCount: (totalCount) => {
+            dispatch(setTotalUsersCountAC(totalCount))
+        },
+
+
     }
 }
 
 
-const UsersListContainer = connect(mapStateToProps, mapDispatchToProps)(UsersListCLS);
+const UsersListContainer = connect(mapStateToProps, mapDispatchToProps)(UsersAPIComponent);
 
 export default UsersListContainer;
