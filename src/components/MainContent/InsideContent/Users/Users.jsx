@@ -1,6 +1,10 @@
 import React from 'react'
 import s from "./Users.module.css";
 import usersPhoto from "../../../../assets/image/UsersIcon.png";
+<<<<<<< HEAD
+=======
+import {NavLink} from "react-router-dom";
+>>>>>>> 7ab811ff51d300d96f9c4ba68d21670408d3119d
 
 
 let Users = (props) => {
@@ -26,7 +30,7 @@ let Users = (props) => {
                     <section className={s.wrapper}>
 
                         <div className={s.logoAndStatus}>
-                            <img src={u.photos.small !== null ? u.photos.small : usersPhoto}/>
+                            <NavLink to={'/MainContent/InsideContent/My-Profile/MyPosts/' + u.id}><img src={u.photos.small !== null ? u.photos.small : usersPhoto}/></NavLink>
                             {u.followed
                                 ?
                                 <button className={s.followedBtn} onClick={() => {
