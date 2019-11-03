@@ -7,7 +7,7 @@ const NavigationItems = () => {
     return (
         <nav className={styles.HeaderNav}>
             <div>
-                <NavLink to="/MainContent/InsideContent/My-Profile/MyPosts" className={styles.item}
+                <NavLink to="/MainContent/InsideContent/Home-page" className={styles.item}
                          activeClassName={styles.activeLink}>Главная
                     страница</NavLink>
             </div>

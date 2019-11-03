@@ -17,7 +17,7 @@ const InsideContent = () => {
                 <Route path='/MainContent/InsideContent/Contacts' render={ () => <Contacts />} />
                 <Route path='/MainContent/InsideContent/TODO-lists' render={ () => <TodoList />} />
                 <Route path='/MainContent/InsideContent/My-Messages' render={ () => <Messages />} />
-                <Route path='/MainContent/InsideContent/My-Profile' render={ () => <ProfileContainer />} />
+                <Route path='/MainContent/InsideContent/Home-page/:userId?' render={ () => <ProfileContainer />} />
                 <Route path='/MainContent/InsideContent/UsersList' render={ () => <UsersContainer />} />
             </div>
     );

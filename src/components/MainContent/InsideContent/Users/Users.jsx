@@ -12,7 +12,6 @@ let Users = (props) => {
         pages.push(i);
     }
 
-
     return (
         <div>
             <div className={s.paginator}>
@@ -27,7 +26,7 @@ let Users = (props) => {
                     <section className={s.wrapper}>
 
                         <div className={s.logoAndStatus}>
-                            <NavLink to={'/MainContent/InsideContent/My-Profile/MyPosts/' + u.id}><img src={u.photos.small !== null ? u.photos.small : usersPhoto}/></NavLink>
+                            <NavLink to={'/MainContent/InsideContent/Home-page/' + u.id}><img src={u.photos.small !== null ? u.photos.small : usersPhoto}/></NavLink>
                             {u.followed
                                 ?
                                 <button className={s.followedBtn} onClick={() => {
