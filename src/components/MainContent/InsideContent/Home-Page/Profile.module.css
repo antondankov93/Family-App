@@ -1,0 +1,11 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.borderLine{
+    margin-top: 10px;
+    border-bottom: 5px solid lightslategrey;
+    width:1000px;
+}

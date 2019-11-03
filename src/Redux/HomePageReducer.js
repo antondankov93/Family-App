@@ -1,5 +1,6 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST = 'UpdateNewPost';
+const SET_USER_PROFILE = 'SET_USER_PROFILE';
 
 
 let initialState = {
@@ -7,7 +8,7 @@ let initialState = {
         {text: "Я дома!"},
     ],
     newPostText: "Hey Hey",
-
+    profile: null
 }
 
 const HomePageReducer = (state = initialState, action) => {
@@ -31,13 +32,22 @@ const HomePageReducer = (state = initialState, action) => {
                 newPostText: action.newPostText,
             }
         }
+        case SET_USER_PROFILE: {
+            return {
+                ...state,
+                profile: action.profile,
+            }
+        }
+
         default:
             return state;
     }
 }
 
-export const addPostActionCreater = () =>({type: ADD_POST})
-export const onPostChangeActionCreater = (text) =>({type: UPDATE_NEW_POST, newPostText: text})
+export const addNewPost = () =>({type: ADD_POST})
+export const onPostChange = (text) =>({type: UPDATE_NEW_POST, newPostText: text})
+export const setUserProfile = (profile) =>({type: SET_USER_PROFILE, profile})
+
 
 
 export default HomePageReducer;

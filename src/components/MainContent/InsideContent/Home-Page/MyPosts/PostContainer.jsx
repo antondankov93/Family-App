@@ -1,5 +1,5 @@
 import React from 'react';
-import {addPostActionCreater, onPostChangeActionCreater} from "../../../../../Redux/HomePageReducer";
+import {addNewPost, onPostChange} from "../../../../../Redux/HomePageReducer";
 import Post from "./Post";
 import {connect} from "react-redux";
 
@@ -13,11 +13,11 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        addNewPost: () => {dispatch(addPostActionCreater())},
-        onPostChange: (text) => {dispatch(onPostChangeActionCreater(text))}
+        addNewPost,
+        onPostChange
     }
 }
 
-const PostContainer = connect(mapStateToProps, mapDispatchToProps)(Post);
+const PostContainer = connect(mapStateToProps, {addNewPost,onPostChange})(Post);
 
 export default PostContainer;

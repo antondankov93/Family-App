@@ -1,10 +1,7 @@
 import React from 'react'
 import s from "./Users.module.css";
 import usersPhoto from "../../../../assets/image/UsersIcon.png";
-<<<<<<< HEAD
-=======
 import {NavLink} from "react-router-dom";
->>>>>>> 7ab811ff51d300d96f9c4ba68d21670408d3119d
 
 
 let Users = (props) => {

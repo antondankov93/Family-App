@@ -1,0 +1,46 @@
+.wrapper{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    border: 3px solid lightgrey;
+    border-radius: 15px;
+}
+
+.face{
+    margin: 0 40px 0 15px;
+
+}
+
+.name{
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+.bottomMain{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    padding: 5px;
+    align-items: center;
+}
+
+.sideInfo{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    padding: 5px;
+
+}

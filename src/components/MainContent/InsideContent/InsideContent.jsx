@@ -5,8 +5,8 @@ import Contacts from "./Contacts/contacts-template";
 import Events from "./Events/events-template";
 import TodoList from "./TODO-lists/todo-list-template";
 import {Route} from "react-router-dom";
-import PostContainer from "./Home-Page/MyPosts/PostContainer";
 import UsersContainer from "./Users/UsersContainer";
+import ProfileContainer from "./Home-Page/ProfileContainer";
 
 
 const InsideContent = () => {
@@ -17,7 +17,7 @@ const InsideContent = () => {
                 <Route path='/MainContent/InsideContent/Contacts' render={ () => <Contacts />} />
                 <Route path='/MainContent/InsideContent/TODO-lists' render={ () => <TodoList />} />
                 <Route path='/MainContent/InsideContent/My-Messages' render={ () => <Messages />} />
-                <Route path='/MainContent/InsideContent/My-Profile' render={ () => <PostContainer />} />
+                <Route path='/MainContent/InsideContent/My-Profile' render={ () => <ProfileContainer />} />
                 <Route path='/MainContent/InsideContent/UsersList' render={ () => <UsersContainer />} />
             </div>
     );
