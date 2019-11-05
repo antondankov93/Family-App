@@ -6,10 +6,12 @@
   height: 100px;
 }
 
-
-
-
-
 .MainHeader img {
   height: 100px;
+}
+  
+.login{
+  text-decoration: none;
+  color: #f06050;
+font-weight: bold;
 }

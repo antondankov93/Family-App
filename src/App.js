@@ -1,17 +1,14 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header/Header';
 import MainContent from './components/MainContent/MainContent';
-import store from "./Redux/Store";
-
-
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 
 const App = (props) => {
 
     return (
             <div className="wrapper">
-                <Header/>
+                <HeaderContainer/>
                 <MainContent/>
             </div>
     );
