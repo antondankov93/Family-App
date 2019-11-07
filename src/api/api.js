@@ -18,11 +18,11 @@ export const profileAPI = {
 }
 export const loginAPI = {
     getAuthMe () {
-        return instance.get(`auth/me`).then(response => response.data)}
+        return instance.get(`auth/me`)}
 }
 export const followingAPI = {
-    getUnfollow(id) {
-        return instance.delete(id).then(response => response.data)},
-    getFollow(id) {
-        return instance.post(id).then(response => response.data)}
+    getUnfollow(userId) {
+        return instance.delete(`follow/${userId}`).then(response => response.data)},
+    getFollow(userId) {
+        return instance.post(`follow/${userId}`).then(response => response.data)}
 }

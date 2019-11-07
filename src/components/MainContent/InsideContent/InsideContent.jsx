@@ -7,18 +7,21 @@ import TodoList from "./TODO-lists/todo-list-template";
 import {Route} from "react-router-dom";
 import UsersContainer from "./Users/UsersContainer";
 import ProfileContainer from "./Home-Page/ProfileContainer";
+import LoginPage from "../../Login/login";
 
 
 const InsideContent = () => {
 
     return (
             <div className={styles.insideContent}>
-                <Route path='/MainContent/InsideContent/Events' render={ () => <Events />} />
-                <Route path='/MainContent/InsideContent/Contacts' render={ () => <Contacts />} />
-                <Route path='/MainContent/InsideContent/TODO-lists' render={ () => <TodoList />} />
-                <Route path='/MainContent/InsideContent/My-Messages' render={ () => <Messages />} />
-                <Route path='/MainContent/InsideContent/Home-page/:userId?' render={ () => <ProfileContainer />} />
-                <Route path='/MainContent/InsideContent/UsersList' render={ () => <UsersContainer />} />
+                <Route path='/Events' render={ () => <Events />} />
+                <Route path='/Contacts' render={ () => <Contacts />} />
+                <Route path='/TODO-lists' render={ () => <TodoList />} />
+                <Route path='/My-Messages' render={ () => <Messages />} />
+                <Route path='/Home-page/:userId?' render={ () => <ProfileContainer />} />
+                <Route path='/UsersList' render={ () => <UsersContainer />} />
+                <Route path='/Login' render={ () => <LoginPage />} />
+
             </div>
     );
 }

@@ -1,8 +1,6 @@
 import React from 'react';
 import style from "./Post.module.css";
 import PostElement from "./PostElement/PostElement";
-import {addPostActionCreater, onPostChangeActionCreater} from "../../../../../Redux/HomePageReducer";
-
 
 
 let Post = (props) => {

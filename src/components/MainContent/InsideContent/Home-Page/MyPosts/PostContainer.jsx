@@ -11,13 +11,6 @@ let mapStateToProps = (state) => {
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
-    return {
-        addNewPost,
-        onPostChange
-    }
-}
-
 const PostContainer = connect(mapStateToProps, {addNewPost,onPostChange})(Post);
 
 export default PostContainer;
