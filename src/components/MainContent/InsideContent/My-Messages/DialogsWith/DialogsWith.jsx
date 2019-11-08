@@ -11,7 +11,7 @@ const DialogsWith = (props) => {
     return (
         <div className={styles.Wrapper}>
             <div className={styles.wrapperMembers}>
-                <NavLink to="UsersList"  className={styles.navlink}>Показать пользователей</NavLink>
+                <NavLink to="/UsersList"  className={styles.navlink}>Показать пользователей</NavLink>
                 {DialogElement}
             </div>
 

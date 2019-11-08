@@ -19,6 +19,8 @@ const MessageWindow = (props) => {
         props.onNewMessageChange(body);
     };
 
+
+
     return (
         <div className={styles.Wrapper}>
             {MessageElement}
