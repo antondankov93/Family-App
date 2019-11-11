@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './MessageWindow.module.css';
 import MessageItem from "./MessageItem/MessageItem";
 import {Field, reduxForm} from "redux-form";
+import {Textarea} from "../../../../common/FormsControls/FormsControls";
+import {maxLengthCreator, requiredField} from "../../../../../utils/valiators/validators";
 
 const MessageWindow = (props) => {
 
@@ -22,11 +24,13 @@ const MessageWindow = (props) => {
 
 }
 
+const maxLength10 = maxLengthCreator(10);
+
 const MessageForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
             <div>
-                <Field component={'textarea'} name={'newMessageBody'}
+                <Field validate={[requiredField, maxLength10]} component={Textarea} name={'newMessageBody'}
                        placeholder='Пишите сюда сообщение'/></div>
             <div>
                 <button>Отправить</button>

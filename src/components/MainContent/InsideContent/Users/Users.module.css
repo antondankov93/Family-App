@@ -2,7 +2,8 @@
     display: flex;
     justify-content: space-between;
     width: 800px;
-    margin: 20px
+    margin: 20px;
+    align-items: center;
 }
 
 .logoAndStatus{
