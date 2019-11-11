@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './ProfileInfo.module.css'
 import Preloader from "../../../../common/preloader";
+import ProfileStatus from "./ProfileStatus";
 
 
 
@@ -12,14 +13,16 @@ const  ProfileInfo = (props) => {
         )
     }
 
-
     return (
         <section className={s.wrapper}>
             <img className={s.face}
                  src={props.profile.photos.large !== null ? props.profile.photos.small : "https://img.icons8.com/cute-clipart/100/000000/angry-face-meme.png"}/>
 
             <div className={s.main}>
-                <div className={s.name}>{props.profile.fullName}</div>
+                <div className={s.topMain}>
+                    <div className={s.name}>{props.profile.fullName}</div>
+                    <div className={s.status}><ProfileStatus status={props.status} updateStatusThunk={props.updateStatusThunk}/></div>
+                </div>
                 <div className={s.bottomMain}>
                     <div className={s.aboutMe}>{props.profile.aboutMe}</div>
                     <div className={s.sideInfo}>

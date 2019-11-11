@@ -7,7 +7,7 @@ import TodoList from "./TODO-lists/todo-list-template";
 import {Route} from "react-router-dom";
 import UsersContainer from "./Users/UsersContainer";
 import ProfileContainer from "./Home-Page/ProfileContainer";
-import LoginPage from "../../Login/login";
+import LoginPage from "../../Login/Login";
 
 
 const InsideContent = () => {

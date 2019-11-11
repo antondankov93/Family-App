@@ -1,36 +1,35 @@
 import React from 'react';
 import style from "./Post.module.css";
 import PostElement from "./PostElement/PostElement";
+import {Field, reduxForm} from "redux-form";
 
 
 let Post = (props) => {
 
     let Posts = props.HomePage.PostsArray.map(p => <PostElement message={p.text}/>)
 
-    let newPostElement = React.createRef();
-
-    let addNewPost = () => {
-        props.addNewPost();
-       //  let text = newPostElement.current.value;
-       //  //props.addPost();
-       // props.store.dispatch(addPostActionCreater());
-    }
-
-    let onPostChange = () =>{
-        let text = newPostElement.current.value;
-        props.onPostChange(text);
-        // let action = onPostChangeActionCreater(text);
-        // props.store.dispatch(action);
+    let addNewPost = (values) =>{
+        props.addNewPost(values.PostFormText);
     }
 
     return (
         <div className={style.wrapper}>
             <div>{Posts}</div>
-            <textarea onChange={onPostChange} value={props.newPostText} ref={newPostElement} ></textarea><br></br>
-            <button onClick={addNewPost}>Отправить</button>
+            <PostReduxForm onSubmit={addNewPost}/>
         </div>
     )
 
 }
+
+const PostForm = (props) => {
+    return (
+        <form onSubmit={props.handleSubmit}>
+            <Field component='textarea' name='PostFormText' placeholder='напишите пост'/><br/>
+            <button>Отправить</button>
+        </form>
+    )
+}
+
+const PostReduxForm = reduxForm({form: 'PostForm'})(PostForm)
 
 export default Post;

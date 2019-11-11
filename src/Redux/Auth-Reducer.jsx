@@ -15,7 +15,6 @@ const authReducer = (state = initialState, action) => {
 
     switch(action.type){
         case SET_USER_DATA:
-            debugger
         return {
                 ...state,
            ...action.data,
@@ -31,10 +30,11 @@ const authReducer = (state = initialState, action) => {
 export const setAuthUserData = (userId, email, login) =>({type: SET_USER_DATA, data: {userId, login, email}})
 
 export const getAuthUserData = () => (dispatch) => {
+
            loginAPI.getAuthMe()
-               .then(response => {
-               if(response.data.resutCode === 0){
-                   let {id, login, email} = response.data.data;
+               .then(data => {
+               if(data.resultCode === 0){
+                   let {id, login, email} = data.data;
                    dispatch(setAuthUserData(id, email, login))
                }
            })}

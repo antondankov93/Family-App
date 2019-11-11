@@ -1,31 +1,43 @@
 import React from 'react';
 import Profile from "./Profile";
-import * as axios from "axios";
 import {connect} from "react-redux";
-import {profileThunk, setUserProfile} from "../../../../Redux/HomePageReducer";
+import {getStatusThunk, profileThunk, setUserProfile, updateStatusThunk} from "../../../../Redux/HomePageReducer";
 import {withRouter} from "react-router-dom";
-import {profileAPI} from "../../../../api/api";
+import {withAuthRedirect} from "../../../../HOC/withAuthRedirect";
+import {compose} from "redux";
 
 
 class ProfileContainer extends React.Component {
 
     componentDidMount() {
         let userId = this.props.match.params.userId;
-        if(!userId){userId = 5000}
-       this.props.profileThunk(userId);
+        if (!userId) {
+            userId = 5000
+        }
+        this.props.profileThunk(userId);
+        setTimeout(() => {
+            this.props.getStatusThunk(userId)
+        }, 1000)
+
     }
 
     render() {
+
         return (
-            <Profile {...this.props} profile={this.props.profile}/>
+            <Profile {...this.props} profile={this.props.profile}
+                     status={this.props.status}
+                     updateStatusThunk={this.props.updateStatusThunk}/>
         )
     }
 }
 
 let mapStateToProps = (state) => ({
-    profile: state.HomePage.profile
+    profile: state.HomePage.profile,
+    status: state.HomePage.status,
 })
 
-let WithUrlDataContainerComponent = withRouter(ProfileContainer)
-
-export default connect(mapStateToProps, {setUserProfile, profileThunk})(WithUrlDataContainerComponent);
+export default compose(
+    connect(mapStateToProps, {setUserProfile, profileThunk, getStatusThunk, updateStatusThunk}),
+    withRouter,
+    withAuthRedirect
+)(ProfileContainer);

@@ -1,5 +1,5 @@
 import React from 'react';
-import {addNewPost, onPostChange} from "../../../../../Redux/HomePageReducer";
+import {addNewPost} from "../../../../../Redux/HomePageReducer";
 import Post from "./Post";
 import {connect} from "react-redux";
 
@@ -11,6 +11,6 @@ let mapStateToProps = (state) => {
     }
 }
 
-const PostContainer = connect(mapStateToProps, {addNewPost,onPostChange})(Post);
+const PostContainer = connect(mapStateToProps, {addNewPost})(Post);
 
 export default PostContainer;

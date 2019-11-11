@@ -1,27 +1,23 @@
 import React from 'react';
 import {sendMessageCreater, updateNewMessageBodyCreater} from "../../../../../Redux/MessagePageReducer";
-import MessageWindow from "./MessageWindow";
 import {connect} from "react-redux";
+import {withAuthRedirect} from "../../../../../HOC/withAuthRedirect";
+import MessageWindow from "./MessageWindow";
+import {compose} from "redux";
 
-let mapStateToProps = (state) => {
-    return {
-        MessagesPage: state.MessagesPage,
-        isAuth: state.Auth.isAuth
-    }
-}
+let mapStateToProps = (state) => ({
+    MessagesPage: state.MessagesPage,
+})
+
 let mapDispatchToProps = (dispatch) => {
     return {
-        onSendMessageClick: () => {
-            dispatch(sendMessageCreater())
+        onSendMessageClick: (newMessageBody) => {
+            dispatch(sendMessageCreater(newMessageBody))
         },
-
-        onNewMessageChange: (body) => {
-            dispatch(updateNewMessageBodyCreater(body))
-        },
-
     }
 }
 
-const MessageWindowContainer = connect(mapStateToProps, mapDispatchToProps)(MessageWindow);
-
-export default MessageWindowContainer;
+export default compose(
+    connect(mapStateToProps, mapDispatchToProps),
+    withAuthRedirect
+)(MessageWindow);
