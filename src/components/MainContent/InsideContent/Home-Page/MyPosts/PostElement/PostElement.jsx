@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import styles from './PostElement.module.css';
 import style from "../Post.module.css";
 

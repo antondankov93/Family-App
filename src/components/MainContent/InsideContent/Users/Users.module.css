@@ -1,0 +1,57 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    margin: 20px
+}
+
+.logoAndStatus{
+    display: flex;
+    flex-direction: column;
+
+}
+.logoAndStatus img{
+    margin-bottom: 30px;
+    border: 1px solid lightgray;
+    border-radius: 30px;
+}
+.logoAndStatus .followedBtn{
+    border-radius: 15px;
+    outline: none;
+}
+
+.UserAllContent{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.NameStatus{
+    display: flex;
+    flex-direction: column;
+}
+
+.NameStatus .Name{
+    font-weight: bold;
+}
+
+
+.CountryCity{
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+}
+
+.paginator span{
+  margin: 3px;
+}
+.paginator span:hover{
+    font-weight: bold;
+}
+.selectedPage{
+    font-weight: bold;
+    border: 1px solid lightgray;
+}

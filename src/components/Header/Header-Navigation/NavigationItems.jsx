@@ -7,31 +7,31 @@ const NavigationItems = () => {
     return (
         <nav className={styles.HeaderNav}>
             <div>
-                <NavLink to="/MainContent/InsideContent/My-Profile/MyPosts" className={styles.item}
+                <NavLink to="/Home-page" className={styles.item}
                          activeClassName={styles.activeLink}>Главная
                     страница</NavLink>
             </div>
 
             <div>
-                <NavLink to="/MainContent/InsideContent/My-Messages"
+                <NavLink to="/My-Messages"
                          activeClassName={styles.activeLink}
                          className={styles.item}>Мои сообщения</NavLink>
             </div>
 
             <div>
-                <NavLink to="/MainContent/InsideContent/Events" activeClassName={styles.activeLink}
+                <NavLink to="/Events" activeClassName={styles.activeLink}
                          className={styles.item}>События</NavLink>
             </div>
 
             <div>
-                <NavLink to="/MainContent/InsideContent/TODO-lists"
+                <NavLink to="/TODO-lists"
                          activeClassName={styles.activeLink} className={styles.item}>Списки
                     дел</NavLink>
             </div>
 
 
             <div>
-                <NavLink to="/MainContent/InsideContent/Contacts" activeClassName={styles.activeLink}
+                <NavLink to="/Contacts" activeClassName={styles.activeLink}
                          className={styles.item}>Контакты</NavLink>
             </div>
         </nav>
