@@ -3,24 +3,32 @@ import {connect} from "react-redux";
 import {
     follow,
     followSuccess,
-    getUsers,
+    requestUsers,
     setCurrentPage,
     toggleFollowingProgress, unfollow,
     unfollowSuccess,
 } from "../../../../Redux/UsersPageReducer";
 import Users from "./Users";
 import Preloader from "../../../common/preloader";
+import {
+    getUsers,
+    getCurrentPage,
+    getFollowingInProgress,
+    getIsFetching,
+    getPageSize,
+    getTotalUsersCount
+} from "../../../../Redux/usersSelector";
 
 
 class UsersContainer extends React.Component {
 
 
     componentDidMount() {
-        this.props.getUsers(this.props.currentPage, this.props.pageSize);
+        this.props.requestUsers(this.props.currentPage, this.props.pageSize);
     }
 
     onPageChanged = (pageNumber) => {
-        this.props.getUsers(pageNumber, this.props.pageSize);
+        this.props.requestUsers(pageNumber, this.props.pageSize);
     }
 
     render(){
@@ -42,7 +50,7 @@ class UsersContainer extends React.Component {
     }
 }
 
-
+/*
 let mapStateToProps = (state) => {
     return {
         users: state.UsersPage.users,
@@ -51,6 +59,17 @@ let mapStateToProps = (state) => {
         currentPage: state.UsersPage.currentPage,
         isFetching: state.UsersPage.isFetching,
         followingInProgress: state.UsersPage.followingInProgress,
+    }
+ }*/
+
+let mapStateToProps = (state) => {
+    return {
+        users: getUsers(state),
+        pageSize: getPageSize(state),
+        totalUsersCount: getTotalUsersCount(state),
+        currentPage: getCurrentPage(state),
+        isFetching: getIsFetching(state),
+        followingInProgress: getFollowingInProgress(state),
     }
  }
 
@@ -87,4 +106,4 @@ let mapStateToProps = (state) => {
 
 
 export default connect(mapStateToProps,
-    {followSuccess, unfollowSuccess, setCurrentPage, toggleFollowingProgress, getUsers, follow, unfollow})(UsersContainer);
+    {followSuccess, unfollowSuccess, setCurrentPage, toggleFollowingProgress, requestUsers, follow, unfollow})(UsersContainer);

@@ -12,7 +12,7 @@ class ProfileContainer extends React.Component {
     componentDidMount() {
         let userId = this.props.match.params.userId;
         if (!userId) {
-            userId = 5000
+            userId = this.props.authUserId   
         }
         this.props.profileThunk(userId);
         setTimeout(() => {
@@ -34,6 +34,8 @@ class ProfileContainer extends React.Component {
 let mapStateToProps = (state) => ({
     profile: state.HomePage.profile,
     status: state.HomePage.status,
+    authUserId: state.Auth.userId,
+    isAuth: state.Auth.isAuth
 })
 
 export default compose(
